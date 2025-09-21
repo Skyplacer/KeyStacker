@@ -108,7 +108,9 @@
         android:id="@+id/spinner2"
         android:layout_width="314dp"
         android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="260dp"
         android:background="@color/light_grey"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="424dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

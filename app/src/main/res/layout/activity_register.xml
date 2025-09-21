@@ -11,9 +11,11 @@
         android:id="@+id/imageView"
         android:layout_width="233dp"
         android:layout_height="516dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="-171dp" />
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="384dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo" />
 
     <EditText
         android:id="@+id/ConfirmPass"
@@ -89,18 +91,22 @@
         android:id="@+id/checkBox"
         android:layout_width="42dp"
         android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="128dp"
         android:text="CheckBox"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="553dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="350dp"
         android:layout_height="31dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="144dp"
         android:text="I agree to the terms and conditions"
         android:textColor="@color/white"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="571dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

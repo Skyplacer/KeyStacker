@@ -63,21 +63,25 @@
         android:id="@+id/ForgotPass"
         android:layout_width="240dp"
         android:layout_height="27dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="264dp"
         android:text="Forgot Password?"
         android:textColor="@color/white"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="439dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/NewUser"
         android:layout_width="240dp"
         android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="52dp"
         android:text="New User?"
         android:textColor="@color/white"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="651dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/NewAccount"
