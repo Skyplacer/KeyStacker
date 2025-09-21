@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    tools:context=".Payment">
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="175dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="@color/neon_blue"
+        android:text="Proceed"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="233dp"
+        android:layout_height="516dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/Username"
+        android:layout_width="314dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="216dp"
+        android:background="@color/light_grey"
+        android:hint="Card Number"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Username"
+        android:layout_width="314dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="360dp"
+        android:background="@color/light_grey"
+        android:hint="Cardholder Name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Username"
+        android:layout_width="314dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="492dp"
+        android:background="@color/light_grey"
+        android:hint="Zip Code"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Username"
+        android:layout_width="139dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="288dp"
+        android:background="@color/light_grey"
+        android:hint="MM/YY"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Username"
+        android:layout_width="139dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="288dp"
+        android:background="@color/light_grey"
+        android:hint="CVV"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="314dp"
+        android:layout_height="51dp"
+        android:background="@color/light_grey"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="424dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

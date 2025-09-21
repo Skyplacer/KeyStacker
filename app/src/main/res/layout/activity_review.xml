@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    tools:context=".Review">
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="380dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="524dp"
+        android:background="@color/light_grey"
+        android:hint="write your review"
+        android:textSize="28dp"
+        android:textAlignment="textStart"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="181dp"
+        android:layout_height="47dp"
+        android:text="Game Name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="257dp"
+        android:layout_height="39dp"
+        android:text="Rate your purchase"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="52dp"
+        android:layout_height="55dp"
+        tools:layout_editor_absoluteX="343dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="204dp"
+        android:layout_height="117dp"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="225dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="443dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
