@@ -5,15 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class Landing : AppCompatActivity() {
+class ForgotPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_landing)
+        setContentView(R.layout.activity_forgot_password)
 
-        val login = findViewById<Button>(R.id.Login)
-        login.setOnClickListener {
+        val forgotPass = findViewById<Button>(R.id.changepass)
+        forgotPass.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
     }
+
+
 }

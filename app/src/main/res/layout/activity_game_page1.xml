@@ -14,7 +14,7 @@
         <!-- Add more items here -->
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/profilepicgame"
             android:layout_width="57dp"
             android:layout_height="56dp"
             android:layout_marginTop="28dp"
@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/gamethumbnail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
@@ -47,7 +47,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/gameimage1"
             android:layout_width="92dp"
             android:layout_height="92dp"
             android:layout_marginStart="8dp"
@@ -57,7 +57,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/gameimage2"
             android:layout_width="98dp"
             android:layout_height="96dp"
             android:layout_marginStart="124dp"
@@ -67,7 +67,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/gameimage3"
             android:layout_width="93dp"
             android:layout_height="97dp"
             android:layout_marginTop="664dp"
@@ -80,12 +80,32 @@
             android:id="@+id/textView11"
             android:layout_width="261dp"
             android:layout_height="133dp"
-            android:layout_marginTop="388dp"
+            android:layout_marginTop="476dp"
             android:layout_marginEnd="56dp"
             android:text="Game Description"
             android:textColor="@color/white"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buynow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="372dp"
+            android:layout_marginEnd="68dp"
+            android:text="Buy Now"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addtocart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="372dp"
+            android:text="Add to Cart"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

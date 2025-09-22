@@ -10,9 +10,21 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val btn = findViewById<Button>(R.id.Login)
-        btn.setOnClickListener {
+        val login = findViewById<Button>(R.id.Login)
+        login.setOnClickListener {
             val intent = Intent(this, Homescreen::class.java)
+            startActivity(intent)
+        }
+
+        val forgotpass = findViewById<Button>(R.id.ForgotPass)
+        forgotpass.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
+
+        val newacc = findViewById<Button>(R.id.NewAccount)
+        newacc.setOnClickListener {
+            val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
     }
