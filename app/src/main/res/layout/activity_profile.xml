@@ -8,28 +8,28 @@
     tools:context=".Profile">
 
     <EditText
-        android:id="@+id/currentPass"
+        android:id="@+id/newPass"
         android:layout_width="314dp"
         android:layout_height="42dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="320dp"
         android:background="@color/light_grey"
-        android:hint="Current Password"
-        android:inputType="text"
+        android:hint="New Password"
+        android:inputType="textPassword"
         android:padding="12dp"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/newPass"
+        android:id="@+id/currentPass"
         android:layout_width="314dp"
         android:layout_height="42dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginTop="248dp"
         android:background="@color/light_grey"
-        android:hint="New Password"
-        android:inputType="text"
+        android:hint="Current Password"
+        android:inputType="textPassword"
         android:padding="12dp"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,10 +48,10 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/UsernameProfile"
         android:layout_width="167dp"
         android:layout_height="46dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="180dp"
         android:layout_marginEnd="120dp"
         android:text="Username"
         android:textAlignment="center"
@@ -60,23 +60,57 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/changePassButton"
         android:layout_width="205dp"
         android:layout_height="51dp"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="156dp"
         android:backgroundTint="@color/neon_blue"
         android:text="Change Password"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/deleteAccountButton"
+        android:layout_width="205dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="156dp"
+        android:backgroundTint="@color/neon_blue"
+        android:text="Delete Account"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reviewcount"
+        android:layout_width="123dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="16dp"
+        android:text="Review Count"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/gamespurchased"
+        android:layout_width="123dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="76dp"
+        android:text="Games Purchased"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="38dp"
         android:layout_height="36dp"
         android:layout_marginStart="56dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="140dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -85,8 +119,8 @@
         android:id="@+id/stackpointvalue2"
         android:layout_width="123dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="140dp"
         android:text="0"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -96,8 +130,8 @@
         android:id="@+id/gamespurchasedvalue"
         android:layout_width="123dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="76dp"
         android:text="0"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -107,34 +141,12 @@
         android:id="@+id/reviewcountvalue"
         android:layout_width="123dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="16dp"
         android:text="0"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/gamespurchased"
-        android:layout_width="123dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="124dp"
-        android:text="Games Purchased"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/reviewcount"
-        android:layout_width="123dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="64dp"
-        android:text="Review Count"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/menuButton"

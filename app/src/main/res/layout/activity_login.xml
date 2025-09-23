@@ -25,7 +25,7 @@
         android:background="@color/light_grey"
         android:hint="Password"
         android:textColorHint="@color/white"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
@@ -33,14 +33,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/Email"
         android:layout_width="375dp"
         android:layout_height="57dp"
         android:layout_marginTop="228dp"
         android:background="@color/light_grey"
         android:textColorHint="@color/white"
-        android:hint="Username"
-        android:inputType="text"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
