@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 
-class Settings : AppCompatActivity() {
+class Settings : BaseDrawer() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_settings)
+        setContentLayout(R.layout.activity_settings)
 
         val profilesettings = findViewById<ImageView>(R.id.profilepic3)
         profilesettings.setOnClickListener {

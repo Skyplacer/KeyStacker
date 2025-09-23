@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:fitsSystemWindows="true">
+
+    <!-- Your activity content gets inflated here -->
+    <FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- LEFT Drawer -->
+    <LinearLayout
+        android:id="@+id/drawerContainer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/light_grey"
+        android:padding="16dp"
+        android:layout_gravity="start">
+
+        <!-- Close area at top with app title / logo if you like -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <!-- Text “buttons” -->
+        <TextView
+            android:id="@+id/navHome"
+            style="@style/NavItemStyle"
+            android:text="Home" />
+
+        <TextView
+            android:id="@+id/navLibrary"
+            style="@style/NavItemStyle"
+            android:text="Library" />
+
+        <TextView
+            android:id="@+id/navStackpoints"
+            style="@style/NavItemStyle"
+            android:text="Stackpoints" />
+
+        <TextView
+            android:id="@+id/navSettings"
+            style="@style/NavItemStyle"
+            android:text="Settings" />
+
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

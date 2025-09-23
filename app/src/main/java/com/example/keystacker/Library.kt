@@ -3,9 +3,9 @@ package com.example.keystacker
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Library : AppCompatActivity() {
+class Library : BaseDrawer() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_library)
+        setContentLayout(R.layout.activity_library)
     }
 }

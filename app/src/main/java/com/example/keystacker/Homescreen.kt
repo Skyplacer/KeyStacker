@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 
-class Homescreen : AppCompatActivity() {
+class Homescreen : BaseDrawer() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homescreen)
+        setContentLayout(R.layout.activity_homescreen)
 
         val profileHome = findViewById<ImageView>(R.id.profilepicHome)
         profileHome.setOnClickListener {
