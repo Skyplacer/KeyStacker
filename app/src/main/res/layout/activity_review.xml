@@ -13,7 +13,7 @@
         android:layout_height="180dp"
         android:layout_marginTop="524dp"
         android:background="@color/light_grey"
-        android:hint="write your review"
+        android:hint="Write your review"
         android:textSize="28dp"
         android:textAlignment="textStart"
         android:inputType="text"
@@ -30,7 +30,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="112dp"
-        android:text="Game Name"
+        android:text="Battlefield 1"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="28dp"
@@ -58,7 +58,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/pfp" />
 
     <ImageView
         android:id="@+id/gameimagerate"
@@ -68,7 +68,7 @@
         android:layout_marginEnd="104dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/game3" />
 
     <RatingBar
         android:id="@+id/ratingBar"

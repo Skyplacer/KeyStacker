@@ -15,7 +15,7 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/pfp" />
 
     <TextView
         android:id="@+id/appearance"
@@ -99,8 +99,8 @@
         android:id="@+id/tc"
         android:layout_width="207dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="160dp"
         android:backgroundTint="@android:color/transparent"
         android:padding="0dp"
         android:text="Terms and Conditions"
@@ -113,7 +113,7 @@
         android:id="@+id/privacy"
         android:layout_width="150dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="216dp"
+        android:layout_marginEnd="228dp"
         android:layout_marginBottom="112dp"
         android:backgroundTint="@android:color/transparent"
         android:padding="0dp"
@@ -127,7 +127,7 @@
         android:id="@+id/about"
         android:layout_width="166dp"
         android:layout_height="34dp"
-        android:layout_marginEnd="200dp"
+        android:layout_marginEnd="204dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="@android:color/transparent"
         android:padding="0dp"

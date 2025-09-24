@@ -17,11 +17,11 @@
             android:id="@+id/profilepicgame"
             android:layout_width="57dp"
             android:layout_height="56dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/pfp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -29,7 +29,7 @@
             android:layout_height="43dp"
             android:layout_marginTop="116dp"
             android:layout_marginEnd="20dp"
-            android:text="Game Name"
+            android:text="Battlefield 4"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="28dp"
@@ -38,13 +38,13 @@
 
         <ImageView
             android:id="@+id/gamethumbnail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            android:layout_marginEnd="124dp"
+            android:layout_width="170dp"
+            android:layout_height="153dp"
+            android:layout_marginTop="184dp"
+            android:layout_marginEnd="104dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/game3" />
 
         <ImageView
             android:id="@+id/gameimage1"
@@ -54,17 +54,17 @@
             android:layout_marginTop="664dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/ss1" />
 
         <ImageView
             android:id="@+id/gameimage2"
             android:layout_width="98dp"
             android:layout_height="96dp"
-            android:layout_marginStart="124dp"
+            android:layout_marginStart="128dp"
             android:layout_marginTop="664dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/ss2" />
 
         <ImageView
             android:id="@+id/gameimage3"
@@ -74,7 +74,7 @@
             android:layout_marginEnd="28dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/ss3" />
 
         <TextView
             android:id="@+id/textView11"
@@ -82,19 +82,9 @@
             android:layout_height="133dp"
             android:layout_marginTop="476dp"
             android:layout_marginEnd="56dp"
-            android:text="Game Description"
+            android:text="Battlefield 4 is a first-person shooter set in a modern military conflict. Players engage in intense combat across land, sea, and air using a wide array of weapons and vehicles"
             android:textColor="@color/white"
             android:textSize="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/buynow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="372dp"
-            android:layout_marginEnd="68dp"
-            android:text="Buy Now"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,10 +92,20 @@
             android:id="@+id/addtocart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="372dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="412dp"
             android:text="Add to Cart"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buynow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="412dp"
+            android:layout_marginEnd="64dp"
+            android:text="Buy Now"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
@@ -120,6 +120,17 @@
             android:src="@drawable/menu_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="270dp"
+            android:layout_height="51dp"
+            android:text="4.99$"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="36dp"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="346dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

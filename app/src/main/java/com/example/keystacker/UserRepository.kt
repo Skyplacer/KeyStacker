@@ -143,4 +143,34 @@ class UserRepository(private val dbHelper: UserDBHelper) {
         val ok = verifyByEmail(email, currentPlain)
         return if (ok) deleteByEmail(email) else false
     }
+
+    fun emailExists(email: String): Boolean {
+        val db = dbHelper.readableDatabase
+        val c = db.rawQuery(
+            "SELECT 1 FROM ${UserContract.Users.TABLE_NAME} WHERE ${UserContract.Users.COL_EMAIL}=? LIMIT 1",
+            arrayOf(email.trim().lowercase())
+        )
+        val exists = c.use { it.moveToFirst() }
+        db.close()
+        return exists
+    }
+
+    fun setPasswordByEmail(email: String, newPlain: String): Boolean {
+        val db = dbHelper.writableDatabase
+        val rows = try {
+            val newHash = Hashing.sha256(newPlain)
+            db.execSQL(
+                "UPDATE ${UserContract.Users.TABLE_NAME} SET ${UserContract.Users.COL_PASSWORD_HASH}=? WHERE ${UserContract.Users.COL_EMAIL}=?",
+                arrayOf(newHash, email.trim().lowercase())
+            )
+            val check = db.rawQuery(
+                "SELECT 1 FROM ${UserContract.Users.TABLE_NAME} WHERE ${UserContract.Users.COL_EMAIL}=? AND ${UserContract.Users.COL_PASSWORD_HASH}=? LIMIT 1",
+                arrayOf(email.trim().lowercase(), newHash)
+            )
+            check.use { it.moveToFirst() }
+        } finally {
+            db.close()
+        }
+        return rows
+    }
 }
