@@ -12,9 +12,9 @@ class GamePage1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_page1)
 
-        val tvTitle: TextView = findViewById(R.id.textView3)          // "Battlefield 4"
-        val ivThumb: ImageView = findViewById(R.id.gamethumbnail)     // @drawable/game3
-        val tvPrice: TextView = findViewById(R.id.textView4)          // "4.99$"
+        val tvTitle: TextView = findViewById(R.id.textView3)
+        val ivThumb: ImageView = findViewById(R.id.gamethumbnail)
+        val tvPrice: TextView = findViewById(R.id.textView4)
         val btnAdd: Button = findViewById(R.id.addtocart)
 
         val gameName = tvTitle.text.toString()
@@ -33,7 +33,12 @@ class GamePage1 : AppCompatActivity() {
 
         val buynow = findViewById<Button>(R.id.buynow)
         buynow.setOnClickListener {
-            val intent = Intent(this, Checkout::class.java)
+            val intent = Intent(this, Checkout::class.java).apply{
+                putExtra("cart_game_name", gameName)
+                putExtra("cart_game_img_res", gameImageRes)
+                putExtra("cart_game_price", gamePrice)
+                putExtra("cart_qty", 1)
+            }
             startActivity(intent)
         }
 

@@ -1,5 +1,6 @@
 package com.example.keystacker
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +9,7 @@ class Library : BaseDrawer() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_library) // your layout name
+        setContentLayout(R.layout.activity_library) // your layout name
 
         val iv1: ImageView = findViewById(R.id.gamepurchase1)
         val iv2: ImageView = findViewById(R.id.gamepurchase2)
@@ -24,6 +25,12 @@ class Library : BaseDrawer() {
         // Fill sequentially
         purchased.take(imageViews.size).forEachIndexed { index, resId ->
             imageViews[index].setImageResource(resId)
+        }
+
+        val profileHome = findViewById<ImageView>(R.id.profilepicHome)
+        profileHome.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
         }
     }
 

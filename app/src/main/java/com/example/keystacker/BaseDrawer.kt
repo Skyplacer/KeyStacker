@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -49,6 +51,14 @@ abstract class BaseDrawer : AppCompatActivity() {
             closeDrawer()
         }
 
+        val logout = findViewById<TextView>(R.id.navLogOut)
+        logout.setOnClickListener {
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            closeDrawer()
+            toast("Successfully Logged Out")
+        }
+
         // If child layout has a menu button with this ID, hook it automatically
         findViewById<View?>(R.id.menuButton)?.setOnClickListener { toggleDrawer() }
     }
@@ -66,4 +76,7 @@ abstract class BaseDrawer : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+
+    private fun toast(msg: String) =
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
 }

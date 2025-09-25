@@ -53,5 +53,10 @@
             style="@style/NavItemStyle"
             android:text="Settings" />
 
+        <TextView
+            android:id="@+id/navLogOut"
+            style="@style/NavItemStyle"
+            android:text="Log Out" />
+
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
