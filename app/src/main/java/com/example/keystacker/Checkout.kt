@@ -16,12 +16,6 @@ class Checkout : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkout)
 
-        val pay = findViewById<Button>(R.id.Pay)
-        pay.setOnClickListener {
-            val intent = Intent(this, Payment::class.java)
-            startActivity(intent)
-        }
-
         val tvGameName: TextView = findViewById(R.id.gamename)
         val tvGamePrice: TextView = findViewById(R.id.gamevalue)
         val ivGame: ImageView = findViewById(R.id.imageView7)
@@ -53,5 +47,15 @@ class Checkout : AppCompatActivity() {
 
         // Optional: stack points (example: 1 point per $ spent)
         tvStackPoints.text = (total).toInt().toString()
+
+        val pay = findViewById<Button>(R.id.Pay)
+        pay.setOnClickListener {
+            val intent = Intent(this, Payment::class.java).apply{
+                putExtra("purchase_img_res", img)
+                putExtra("purchase_name", name)
+                putExtra("purchase_price", price)
+            }
+            startActivity(intent)
+        }
     }
 }

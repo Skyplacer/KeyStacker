@@ -125,12 +125,14 @@
             android:id="@+id/textView4"
             android:layout_width="270dp"
             android:layout_height="51dp"
+            android:layout_marginTop="344dp"
+            android:layout_marginEnd="64dp"
             android:text="4.99$"
-            android:textColor="@color/white"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="36dp"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="346dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
