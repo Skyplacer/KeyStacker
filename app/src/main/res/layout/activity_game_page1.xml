@@ -47,34 +47,33 @@
             app:srcCompat="@drawable/game3" />
 
         <ImageView
-            android:id="@+id/gameimage1"
-            android:layout_width="92dp"
-            android:layout_height="92dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="664dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ss1" />
-
-        <ImageView
             android:id="@+id/gameimage2"
             android:layout_width="98dp"
             android:layout_height="96dp"
-            android:layout_marginStart="128dp"
-            android:layout_marginTop="664dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="608dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ss2" />
 
         <ImageView
+            android:id="@+id/gameimage1"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="608dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ss1" />
+
+        <ImageView
             android:id="@+id/gameimage3"
             android:layout_width="93dp"
             android:layout_height="97dp"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="28dp"
+            android:layout_marginTop="608dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ss3" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView11"
@@ -99,12 +98,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buynow"
+            android:id="@+id/writereview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="412dp"
             android:layout_marginEnd="64dp"
-            android:text="Buy Now"
+            android:text="Write Review"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

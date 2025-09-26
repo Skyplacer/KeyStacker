@@ -31,13 +31,9 @@ class GamePage1 : AppCompatActivity() {
             startActivity(i)
         }
 
-        val buynow = findViewById<Button>(R.id.buynow)
-        buynow.setOnClickListener {
-            val intent = Intent(this, Checkout::class.java).apply{
-                putExtra("cart_game_name", gameName)
-                putExtra("cart_game_img_res", gameImageRes)
-                putExtra("cart_game_price", gamePrice)
-                putExtra("cart_qty", 1)
+        val writereview = findViewById<Button>(R.id.writereview)
+        writereview.setOnClickListener {
+            val intent = Intent(this, Review::class.java).apply{
             }
             startActivity(intent)
         }

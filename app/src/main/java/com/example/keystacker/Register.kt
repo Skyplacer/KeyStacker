@@ -35,7 +35,7 @@ class Register : AppCompatActivity() {
 
         btnRegister.setOnClickListener {
             handleCreateUser()
-            val intent = Intent(this, Homescreen::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
     }

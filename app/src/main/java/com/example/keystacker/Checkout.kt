@@ -37,8 +37,10 @@ class Checkout : AppCompatActivity() {
         if (img != 0) ivGame.setImageResource(img)
 
         val lineSubtotal = price * qty
-        val discount = 0.0  // plug your discount logic here
+        val discountPercent = PurchaseStore.getActiveDiscountPercent(this) // 0, 5, 10, 20...
+        val discount = lineSubtotal * (discountPercent / 100.0)
         val total = lineSubtotal - discount
+        val points = total.toInt() * 1000 //testing only
 
         tvGamePrice.text = currency.format(price)           // right side of the row
         tvAmountValue.text = currency.format(lineSubtotal)  // subtotal
@@ -54,6 +56,7 @@ class Checkout : AppCompatActivity() {
                 putExtra("purchase_img_res", img)
                 putExtra("purchase_name", name)
                 putExtra("purchase_price", price)
+                putExtra("purchase_points", points)
             }
             startActivity(intent)
         }

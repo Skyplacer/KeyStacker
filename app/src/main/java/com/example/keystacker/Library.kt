@@ -27,7 +27,7 @@ class Library : BaseDrawer() {
             imageViews[index].setImageResource(resId)
         }
 
-        val profileHome = findViewById<ImageView>(R.id.profilepicHome)
+        val profileHome = findViewById<ImageView>(R.id.profilepic1)
         profileHome.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)

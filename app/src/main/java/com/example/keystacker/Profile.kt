@@ -16,6 +16,9 @@ class Profile : AppCompatActivity() {
     private lateinit var etNew: EditText
     private lateinit var btnChange: Button
     private lateinit var btnDelete: Button
+    private lateinit var tvGamesPurchased: TextView
+    private lateinit var tvPoints: TextView
+    private lateinit var tvReviewCount: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -26,6 +29,15 @@ class Profile : AppCompatActivity() {
         btnChange  = findViewById(R.id.changePassButton)
         btnDelete = findViewById(R.id.deleteAccountButton)
         repo = UserRepository(UserDBHelper(this))
+
+        tvGamesPurchased = findViewById(R.id.gamespurchasedvalue)
+        updatePurchasedCount()
+
+        tvPoints = findViewById(R.id.stackpointvalue2)
+        updatePoints()
+
+        tvReviewCount = findViewById(R.id.reviewcountvalue)
+        updateReviewCount()
 
         // 1) Get the current user's email from SharedPreferences
         val email = getSharedPreferences("auth_prefs", MODE_PRIVATE)
@@ -54,6 +66,25 @@ class Profile : AppCompatActivity() {
             Toast.makeText(this, "User not found", Toast.LENGTH_SHORT).show()
         }
     }
+    override fun onResume() {
+        super.onResume()
+        updatePurchasedCount()
+        updatePoints()
+        updateReviewCount()
+    }
+
+    private fun updatePurchasedCount(){
+        tvGamesPurchased.text = PurchaseStore.getCount(this).toString()
+    }
+
+    private fun updatePoints() {
+        tvPoints.text = PurchaseStore.getPoints(this).toString()
+    }
+
+    private fun updateReviewCount() {
+        tvReviewCount.text = PurchaseStore.getReviewCount(this).toString()
+    }
+
     private fun changePassword(email: String) {
         val current = etCurrent.text.toString()
         val newPass = etNew.text.toString()

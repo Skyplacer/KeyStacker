@@ -41,7 +41,17 @@ class Payment : AppCompatActivity() {
         purchaseName = intent.getStringExtra("purchase_name") ?: "Game"
         purchasePrice = intent.getDoubleExtra("purchase_price", 0.0)
 
-        btnProceed.setOnClickListener { handleProceed() }
+        btnProceed.setOnClickListener {
+            handleProceed()
+            PurchaseStore.clearActiveDiscount(this)
+            val i = Intent(this, PaymentSuccess::class.java).apply {
+                putExtra("purchase_name", purchaseName)
+                putExtra("purchase_price", purchasePrice)
+                putExtra("purchase_img_res", purchaseImgRes)
+            }
+            startActivity(i)
+            finish()
+        }
     }
 
     private fun handleProceed() {
@@ -75,15 +85,11 @@ class Payment : AppCompatActivity() {
         // --- “Process” payment (mock) ---
         // Save purchase image to SharedPreferences so Library can show it
         if (purchaseImgRes != 0) {
-            savePurchasedImage(purchaseImgRes)
+            PurchaseStore.addPurchasedImage(this, purchaseImgRes)
         }
-
-        // Go to PaymentSuccess
-        val i = Intent(this, PaymentSuccess::class.java).apply {
-            putExtra("purchase_name", purchaseName)
-        }
-        startActivity(i)
-        finish()
+        PurchaseStore.incrementCount(this)
+        val points = intent.getIntExtra("purchase_points", 0)
+        PurchaseStore.addPoints(this, points)
     }
 
     private fun isValidMMYY(mmyy: String): Boolean {
